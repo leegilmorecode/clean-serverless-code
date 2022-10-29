@@ -1,0 +1,92 @@
+openapi: "3.0.1"
+info:
+  title: "AccountsApi"
+  description: "Onion Accounts API"
+  version: 1.0.0
+servers:
+- url: "https://your-rest-api.execute-api.your-region.amazonaws.com/{basePath}"
+  variables:
+    basePath:
+      default: "/prod"
+paths:
+  /accounts/{id}:
+    get:
+      parameters:
+      - name: "id"
+        in: "path"
+        required: true
+        schema:
+          type: "string" 
+      responses:
+        '200':
+          description: get a customer account
+          content: 
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CustomerAccount' 
+    patch:
+      parameters:
+      - name: "id"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      responses:
+        '200':
+          description: upgrade a customer account
+          content: 
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CustomerAccount'  
+  /accounts:
+    post:
+      requestBody:
+        description: create a new customer account
+        content: 
+          'application/json':
+            schema:
+              $ref: '#/components/schemas/CreateNewCustomerAccount'
+      responses:
+         '201':
+          description: create a customer account
+          content: 
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CustomerAccount'    
+components:
+  schemas:
+    CreateNewCustomerAccount:
+      type: object
+      required:
+        - firstName
+        - surname
+      properties:
+        firstname:
+          type: "string"
+        surname:
+          type: "string"
+    CustomerAccount:
+      type: object
+      required:
+        - firstName
+        - surname
+        - created
+        - updated
+        - subscriptionType
+        - paymentStatus
+      properties:
+        firstname:
+          type: "string"
+        surname:
+          type: "string"
+        created:
+          type: "string"
+        updated:
+          type: "string"
+        subscriptionType:
+          type: "string"
+        paymentStatus:
+          type: "string"
+
+      
+        

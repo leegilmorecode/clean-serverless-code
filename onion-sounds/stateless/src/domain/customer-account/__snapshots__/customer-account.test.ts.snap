@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`customer-account create account should create the new account successfully with a valid customer 1`] = `
+CustomerAccount {
+  "_created": "2022-01-01T00:00:00.000Z",
+  "_id": "f39e49ad-8f88-448f-8a15-41d560ad6d70",
+  "_updated": "2022-01-01T00:00:00.000Z",
+  "props": Object {
+    "created": "2022-01-01T00:00:00.000Z",
+    "firstName": "Lee",
+    "id": "f39e49ad-8f88-448f-8a15-41d560ad6d70",
+    "paymentStatus": "Valid",
+    "subscriptionType": "Basic",
+    "surname": "Gilmore",
+    "updated": "2022-01-01T00:00:00.000Z",
+  },
+}
+`;
+
+exports[`customer-account toDomain should create a domain object based on a dto 1`] = `
+CustomerAccount {
+  "_created": "2022-01-01T00:00:00.000Z",
+  "_id": "f39e49ad-8f88-448f-8a15-41d560ad6d70",
+  "_updated": "2022-01-01T00:00:00.000Z",
+  "props": Object {
+    "created": "2022-01-01T00:00:00.000Z",
+    "firstName": "Lee",
+    "id": "f39e49ad-8f88-448f-8a15-41d560ad6d70",
+    "paymentStatus": "Valid",
+    "subscriptionType": "Upgraded",
+    "surname": "Gilmore",
+    "updated": "2022-01-01T00:00:00.000Z",
+  },
+}
+`;
+
+exports[`customer-account toDto should create the correct dto 1`] = `
+Object {
+  "created": "2022-01-01T00:00:00.000Z",
+  "firstName": "Lee",
+  "id": "f39e49ad-8f88-448f-8a15-41d560ad6d70",
+  "paymentStatus": "Valid",
+  "subscriptionType": "Basic",
+  "surname": "Gilmore",
+  "updated": "2022-01-01T00:00:00.000Z",
+}
+`;
+
+exports[`customer-account upgrade account should upgrade an existing customer by id if payment status is valid 1`] = `
+CustomerAccount {
+  "_created": "2022-01-01T00:00:00.000Z",
+  "_id": "f39e49ad-8f88-448f-8a15-41d560ad6d70",
+  "_updated": "2022-01-01T00:00:00.000Z",
+  "props": Object {
+    "created": "2022-01-01T00:00:00.000Z",
+    "firstName": "Lee",
+    "id": "f39e49ad-8f88-448f-8a15-41d560ad6d70",
+    "paymentStatus": "Valid",
+    "subscriptionType": "Upgraded",
+    "surname": "Gilmore",
+    "updated": "2022-01-01T00:00:00.000Z",
+  },
+}
+`;

@@ -1,0 +1,23 @@
+{
+  "entryPoints": [
+    "./stateless/src/use-cases/create-customer-account/create-customer-account.ts",
+    "./stateless/src/use-cases/retrieve-customer-account/retrieve-customer-account.ts",
+    "./stateless/src/use-cases/upgrade-customer-account/upgrade-customer-account.ts",
+    "./stateless/src/models/types.ts",
+    "./stateless/src/domain/customer-account/customer-account.ts",
+    "./stateless/src/errors/index.ts",
+    "./stateless/src/events/customer-account-created.ts",
+    "./stateless/src/events/customer-account-upgraded.ts"
+  ],
+  "out": "../docs/documentation",
+  "theme": "default",
+  "name": "Onion Sounds - Customer Account Domain Service",
+  "includeVersion": true,
+  "lightHighlightTheme": "light-plus",
+  "hideGenerator": true,
+  "exclude": ["**/*+(index|.test|.spec|.e2e).ts"],
+  "readme": "../docs/DOCS.md",
+  "disableSources": true,
+  "excludePrivate": true,
+  "excludeProtected": true
+}

@@ -1,0 +1,79 @@
+{
+  "info": {
+    "_postman_id": "1388a4e9-9ec6-4b14-84af-fb876e8a8692",
+    "name": "Serverless Clean Architecture",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "752706"
+  },
+  "item": [
+    {
+      "name": "Create Account",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"firstName\": \"Tom\",\n    \"surname\": \"Jones\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://your-rest-id.execute-api.your-region.amazonaws.com/prod/accounts/",
+          "protocol": "https",
+          "host": [
+            "your-rest-id",
+            "execute-api",
+            "your-region",
+            "amazonaws",
+            "com"
+          ],
+          "path": ["prod", "accounts", ""]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Account by ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://your-rest-id.execute-api.your-region.amazonaws.com/prod/accounts/7fe9e0d6-339c-4df3-908f-51281899b3d6",
+          "protocol": "https",
+          "host": [
+            "your-rest-id",
+            "execute-api",
+            "your-region",
+            "amazonaws",
+            "com"
+          ],
+          "path": ["prod", "accounts", "7fe9e0d6-339c-4df3-908f-51281899b3d6"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Upgrade Account",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "url": {
+          "raw": "https://your-rest-id.execute-api.your-region.amazonaws.com/prod/accounts/7fe9e0d6-339c-4df3-908f-51281899b3d6",
+          "protocol": "https",
+          "host": [
+            "your-rest-id",
+            "execute-api",
+            "your-region",
+            "amazonaws",
+            "com"
+          ],
+          "path": ["prod", "accounts", "7fe9e0d6-339c-4df3-908f-51281899b3d6"]
+        }
+      },
+      "response": []
+    }
+  ]
+}
